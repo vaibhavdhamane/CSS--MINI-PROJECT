@@ -1,0 +1,146 @@
+/* Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Full-Screen Background */
+.main_box {
+    background: url(photo.jpg) no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+/* Hamburger Button (Open Menu) */
+.btn_one {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.btn_one i {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Sidebar Menu */
+.sidebar_menu {
+    position: fixed;
+    left: -280px;
+    height: 100vh;
+    width: 260px;
+    background: rgba(10, 10, 10, 0.9); /* Sleek Dark Theme */
+    backdrop-filter: blur(10px); /* Glassmorphism Effect */
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease-in-out;
+    padding-top: 20px;
+}
+
+/* Sidebar Logo */
+.sidebar_menu .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* Close Button */
+.sidebar_menu .btn_two {
+    cursor: pointer;
+}
+
+.sidebar_menu .btn_two i {
+    color: white;
+    font-size: 22px;
+    transition: 0.3s ease;
+}
+
+/* Menu Items */
+.sidebar_menu .menu {
+    margin-top: 20px;
+}
+
+.sidebar_menu .menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar_menu .menu li {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar_menu .menu li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Menu Icons */
+.sidebar_menu .menu i {
+    margin-right: 12px;
+    font-size: 18px;
+    color: white;
+}
+
+/* Menu Links */
+.sidebar_menu .menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Social Media Icons */
+.sidebar_menu .social_media {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar_menu .social_media a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    opacity: 0.7;
+    transition: 0.3s ease-in-out;
+}
+
+.sidebar_menu .social_media a:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Hide Checkbox */
+#check {
+    display: none;
+}
+
+/* Sidebar Toggle */
+#check:checked ~ .sidebar_menu {
+    left: 0;
+}
+
+#check:checked ~ .btn_one i {
+    opacity: 0;
+}
+
+#check:checked ~ .sidebar_menu .btn_two {
+    opacity: 1;
+}
